@@ -1,4 +1,22 @@
 TestApp::Application.routes.draw do
+
+  root to: 'static_pages#home'
+
+  match '/help',    to: 'static_pages#help'
+  match '/home',   to: 'static_pages#home'
+
+  #get "static_pages/home"
+  #get "static_pages/help"
+
+  resources :posts
+
+
+  resources :users
+
+
+  resources :teams
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
